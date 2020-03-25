@@ -1,0 +1,10 @@
+#! /bin/sh
+
+docker build -t dotdo-example .
+echo 'Start example server'
+docker run --rm -ti -d -p 55301:55301 --name dotdo-example dotdo-example
+sleep 2
+echo 'now request'
+curl localhost:55301/HogeFuga.do/laala
+echo -n '\ndone. Delete example server'
+docker stop dotdo-example

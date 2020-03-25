@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "dotdo"
+version = "0.1.0"
+description = ""
+authors = ["mtwtkman <yo@mtwtkman.dev>"]
+include = ["dotdo.py"]
+exclude = ["example.py", "example.ini"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pyramid = "1.*"
+
+[tool.poetry.dev-dependencies]
+mypy = "*"
+black = { version = "*", allows-prereleases = true}
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
